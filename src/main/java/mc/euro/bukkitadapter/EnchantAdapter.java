@@ -15,6 +15,8 @@ import java.util.Map;
  * https://hub.spigotmc.org/javadocs/spigot/org/bukkit/enchantments/Enchantment.html
  *
  */
+
+// TODO: Refactor this class to be similar to MaterialAdapter
 public class EnchantAdapter {
 
     private static final Map<Integer, String> emap = initMap();
