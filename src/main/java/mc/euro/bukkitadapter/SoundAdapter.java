@@ -15,6 +15,8 @@ import org.bukkit.Sound;
  * http://rainbowcraft.sytes.net/javadocs/bukkit/1.8/org/bukkit/Sound.html
  * http://minecraft.gamepedia.com/Sounds.json#Sound_events
  */
+
+// TODO: Refactor this class to be similar to MaterialAdapter
 public class SoundAdapter {
 
     private static final Map<String, String> smap = initMap();
