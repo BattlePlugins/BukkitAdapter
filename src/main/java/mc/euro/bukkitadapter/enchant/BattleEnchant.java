@@ -29,7 +29,7 @@ public enum BattleEnchant {
     SILK_TOUCH(33, "Silk Touch", "SILK_TOUCH", "SILK"),
     DURABILITY(34, "Unbreaking", "UNBREAKING"),
     LOOT_BONUS_BLOCKS(35, "Fortune", "FORTUNE"),
-    ARROW_DAMAGE(48, "Power", "Power"),
+    ARROW_DAMAGE(48, "Power", "POWER"),
     ARROW_KNOCKBACK(49, "Punch", "PUNCH"),
     ARROW_FIRE(50, "Flame", "FLAME"),
     ARROW_INFINITE(51, "Infinity", "INFINITY"),
