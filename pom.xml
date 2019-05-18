@@ -3,10 +3,10 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>mc.euro</groupId>
     <artifactId>BukkitAdapter</artifactId>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
     <packaging>jar</packaging>
     <name>BukkitAdapter</name>
-    <url></url>
+    <url>https://github.com/BattlePlugins/BukkitAdapter/</url>
     <properties>
         <maven.build.timestamp.format>yyyy_MM_dd</maven.build.timestamp.format>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
