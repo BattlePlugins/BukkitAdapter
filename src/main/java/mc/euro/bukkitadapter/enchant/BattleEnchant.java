@@ -1,5 +1,6 @@
 package mc.euro.bukkitadapter.enchant;
 
+import org.bukkit.ChatColor;
 import org.bukkit.enchantments.Enchantment;
 
 import java.util.HashMap;
@@ -16,7 +17,7 @@ public enum BattleEnchant {
     THORNS(7, "Thorns"),
     DEPTH_STRIDER(8, "Depth Strider", "STRIDER"),
     FROST_WALKER(9, "Frost Walker"),
-    BINDING_CURSE(10, "&cCurse of Binding", "CURSE_OF_BINDING"),
+    BINDING_CURSE(10, ChatColor.RED + "Curse of Binding", "CURSE_OF_BINDING"),
     DAMAGE_ALL(16, "Sharpness", "SHARPNESS", "SHARP"),
     DAMAGE_UNDEAD(17, "Smite", "SMITE"),
     DAMAGE_ARTHROPODS(18, "Bane of Arthropods", "BANE_OF_ARTHROPODS", "BANE"),
@@ -35,7 +36,7 @@ public enum BattleEnchant {
     LUCK(61, "Luck of the Sea", "LUCK_OF_THE_SEA"),
     LURE(62, "Lure"),
     MENDING(70, "Mending"),
-    VANISHING_CURSE(71, "Curse of Vanishing", "CURSE_OF_VANISHING"),
+    VANISHING_CURSE(71, ChatColor.RED + "Curse of Vanishing", "CURSE_OF_VANISHING"),
     CHANNELING(-1, "Channeling"),
     IMPALING(-2, "Impaling"),
     LOYALTY(-3, "Loyalty"),
