@@ -1,4 +1,4 @@
-package mc.euro.bukkitadapter.material;
+package mc.euro.bukkitadapter.enchant;
 
 import org.bukkit.enchantments.Enchantment;
 

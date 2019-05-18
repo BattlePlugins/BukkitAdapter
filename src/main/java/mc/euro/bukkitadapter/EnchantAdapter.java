@@ -1,7 +1,7 @@
 package mc.euro.bukkitadapter;
 
 
-import mc.euro.bukkitadapter.material.BattleEnchant;
+import mc.euro.bukkitadapter.enchant.BattleEnchant;
 import org.bukkit.enchantments.Enchantment;
 
 import java.util.Collections;
