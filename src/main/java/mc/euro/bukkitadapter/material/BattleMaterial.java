@@ -1053,7 +1053,7 @@ public enum BattleMaterial {
 
     public static BattleMaterial fromString(String key){
     	String matKey = key.replace("minecraft:", "").toUpperCase();
-        BattleMaterial mat = null;
+        BattleMaterial mat = BattleMaterial.AIR;
 
         try {
             mat = BattleMaterial.valueOf(matKey);
