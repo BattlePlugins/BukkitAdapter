@@ -21,11 +21,16 @@ public class MaterialAdapter {
     @Deprecated
     public static Material getMaterial(String mat) {
         // Try and get it from BattleMaterial first
-        Material material = BattleMaterial.fromString(mat).parseMaterial();
+        Material material = Material.AIR;
+        try {
+            material = BattleMaterial.fromString(mat).parseMaterial();
 
-        // If it doesn't exist, try and get it from a legacy material
-        if (material == null) {
-            material = Material.matchMaterial("LEGACY_" + mat.toUpperCase());
+            // If it doesn't exist, try and get it from a legacy material
+            if (material == null) {
+                material = Material.matchMaterial("LEGACY_" + mat.toUpperCase());
+            }
+        } catch (NullPointerException ex) {
+
         }
 
         return (material == null) ? Material.AIR : material;
