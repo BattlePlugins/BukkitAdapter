@@ -18,8 +18,8 @@
     </properties>
     <repositories>
         <repository>
-            <id>rainbowcraft-repo</id>
-            <url>http://rainbowcraft.sytes.net/maven/repository/</url>
+            <id>battleplugins-repo</id>
+            <url>https://artifactory.battleplugins.org/artifactory/libs-snapshot-local</url>
         </repository>
         <repository>
             <id>spigot-public</id>
@@ -50,37 +50,49 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+    <distributionManagement>
+        <repository>
+            <id>central</id>
+            <name>BattlePlugins Artifactory Server-releases</name>
+            <url>https://artifactory.battleplugins.org/artifactory/libs-release-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>BattlePlugins Artifactory Server-snapshots</name>
+            <url>https://artifactory.battleplugins.org/artifactory/libs-snapshot-local</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
-<!-- If you use this module, then include the following to shade it into your final JAR:
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>3.2.1</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                        <configuration>
-                            <relocations>
-                                <relocation>
-                                    <pattern>mc.euro.bukkitadapter</pattern>
-                                    <shadedPattern>${project.groupId}.${project.artifactId}.bukkitadapter</shadedPattern>
-                                </relocation>
-                            </relocations>
-                            <artifactSet>
-                                <includes>
-                                    <include>mc.euro:BukkitAdapter</include>
-                                </includes>
-                            </artifactSet>
-                            <minimizeJar>true</minimizeJar>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
--->
+        <!-- If you use this module, then include the following to shade it into your final JAR:
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-shade-plugin</artifactId>
+                        <version>3.2.1</version>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>shade</goal>
+                                </goals>
+                                <configuration>
+                                    <relocations>
+                                        <relocation>
+                                            <pattern>mc.euro.bukkitadapter</pattern>
+                                            <shadedPattern>${project.groupId}.${project.artifactId}.bukkitadapter</shadedPattern>
+                                        </relocation>
+                                    </relocations>
+                                    <artifactSet>
+                                        <includes>
+                                            <include>mc.euro:BukkitAdapter</include>
+                                        </includes>
+                                    </artifactSet>
+                                    <minimizeJar>true</minimizeJar>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        -->
