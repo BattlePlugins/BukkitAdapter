@@ -1,6 +1,7 @@
 package mc.euro.bukkitadapter.enchant;
 
 import org.bukkit.ChatColor;
+import org.bukkit.NamespacedKey;
 import org.bukkit.enchantments.Enchantment;
 
 import java.util.HashMap;
@@ -65,11 +66,14 @@ public enum BattleEnchant {
             return cached = enchant;
         }
 
-        if (enchant == null && !isNewVersion()) {
-            return cached = Enchantment.getById(id);
+        if (enchant == null && isNewVersion()) {
+            return cached = Enchantment.getByKey(NamespacedKey.minecraft(this.toString().toLowerCase()));
         }
 
-        return cached = Enchantment.getByName(aliases[0]);
+        if (aliases != null && aliases.length > 0)
+            return cached = Enchantment.getByName(aliases[0]);
+
+        return null;
     }
 
     public int getId() {
@@ -94,11 +98,6 @@ public enum BattleEnchant {
                 for (String test : battleEnch.aliases) {
                     if (test.equalsIgnoreCase(enchant.toString()))
                         return battleEnch;
-
-                    if (!isNewVersion()) {
-                        if (enchant.getId() == battleEnch.getId())
-                            return battleEnch;
-                    }
                 }
             }
         }
