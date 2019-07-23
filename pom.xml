@@ -19,7 +19,7 @@
     <repositories>
         <repository>
             <id>battleplugins-repo</id>
-            <url>https://repo.battleplugins.org/artifactory/libs-snapshot-local</url>
+            <url>https://repo.battleplugins.org/artifactory/libs-release-local</url>
         </repository>
         <repository>
             <id>spigot-public</id>
